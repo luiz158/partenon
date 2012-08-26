@@ -15,7 +15,7 @@ public class ConfiguracaoBC extends DelegateCrud<Configuracao, Integer, Configur
     public void carregaConfiguracao(){
         if(findAll().isEmpty()) {
             Configuracao conf = new Configuracao();
-            conf.setConId(1);
+            //conf.setConId(1);
             insert(conf);
         }
     }

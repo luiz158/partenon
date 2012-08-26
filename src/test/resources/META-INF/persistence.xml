@@ -2,12 +2,18 @@
 <persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
     
     <persistence-unit name="partenon-ds" transaction-type="RESOURCE_LOCAL">
+<!--
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>  
+-->
         <class>br.com.syspartenon.partenon.domain.Noticia</class>
         <class>br.com.syspartenon.partenon.domain.Imagem</class>
         <class>br.com.syspartenon.partenon.domain.Evento</class>
         <class>br.com.syspartenon.partenon.domain.EventoEntidade</class>
         <class>br.com.syspartenon.partenon.domain.Comodo</class>
+<!--        
         <class>br.com.syspartenon.partenon.domain.Permissao</class>
+        <class>br.com.syspartenon.partenon.domain.EntidadeEntidadeCategoria</class>
+-->
         <class>br.com.syspartenon.partenon.domain.EventoInsumo</class>
         <class>br.com.syspartenon.partenon.domain.Cidade</class>
         <class>br.com.syspartenon.partenon.domain.Insumo</class>
@@ -28,7 +34,6 @@
         <class>br.com.syspartenon.partenon.domain.Site</class>
         <class>br.com.syspartenon.partenon.domain.Local</class>
         <class>br.com.syspartenon.partenon.domain.FormaPagamento</class>
-        <class>br.com.syspartenon.partenon.domain.EntidadeEntidadeCategoria</class>
         <class>br.com.syspartenon.partenon.domain.EntidadeCategoria</class>
         <class>br.com.syspartenon.partenon.domain.InsumoCategoria</class>
         <class>br.com.syspartenon.partenon.domain.Movimentacao</class>
@@ -52,10 +57,17 @@
             <property name="javax.persistence.jdbc.user" value="augusto"/>
             <property name="javax.persistence.jdbc.password" value="senha"/>
             <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/partenon"/>
+<!--
+            <property name="hibernate.show_sql" value="true" />
+            <property name="hibernate.format_sql" value="true" />
+            <property name="hibernate.hbm2ddl.auto" value="update" />
+            <property name="hibernate.use_sql_comments" value="false" />     
+-->
             <property name="eclipselink.logging.level" value="FINE" />
             <property name="eclipselink.cache.shared.default" value="false"/>
             <property name="eclipselink.ddl-generation" value="create-tables"/>
             <property name="eclipselink.ddl-generation.output-mode" value="database"/>
+
         </properties>
     </persistence-unit>
 </persistence>

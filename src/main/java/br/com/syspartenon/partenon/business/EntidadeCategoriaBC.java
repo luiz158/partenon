@@ -16,27 +16,27 @@ public class EntidadeCategoriaBC extends DelegateCrud<EntidadeCategoria, Integer
         if(getDelegate().findAll().isEmpty()) {
             EntidadeCategoria ec;
             ec = new EntidadeCategoria();
-            ec.setEncId(1);
+            //ec.setEncId(1);
             ec.setEncDescricao("Participante");
             getDelegate().insert(ec);
             
             ec = new EntidadeCategoria();
-            ec.setEncId(2);
+            //ec.setEncId(2);
             ec.setEncDescricao("Cliente");
             getDelegate().insert(ec);
             
             ec = new EntidadeCategoria();
-            ec.setEncId(3);
+            //ec.setEncId(3);
             ec.setEncDescricao("Fornecedor");
             getDelegate().insert(ec);
             
             ec = new EntidadeCategoria();
-            ec.setEncId(4);
+            //ec.setEncId(4);
             ec.setEncDescricao("Cliente da Aplicação");
             getDelegate().insert(ec);
             
             ec = new EntidadeCategoria();
-            ec.setEncId(5);
+            //ec.setEncId(5);
             ec.setEncDescricao("Dono de Imovel");
             getDelegate().insert(ec);
         }
