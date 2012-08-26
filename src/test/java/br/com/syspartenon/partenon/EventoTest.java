@@ -7,6 +7,7 @@ import br.com.syspartenon.partenon.domain.Evento;
 import br.com.syspartenon.partenon.domain.Local;
 import br.gov.frameworkdemoiselle.junit.DemoiselleRunner;
 import br.gov.frameworkdemoiselle.transaction.Transactional;
+import java.util.List;
 import javax.inject.Inject;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -19,7 +20,7 @@ public class EventoTest {
     
         @Test
         public void testLoad() {
-                eventoBC.load();
+                //eventoBC.load();
                 List<Evento> listaEventos = eventoBC.findAll();
                 assertNotNull(listaEventos);
                 assertEquals(0, listaEventos.size());
