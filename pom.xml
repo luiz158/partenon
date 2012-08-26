@@ -25,11 +25,13 @@
             <artifactId>demoiselle-jpa</artifactId>
             <scope>compile</scope>
         </dependency>
+<!--
         <dependency>
             <groupId>br.gov.frameworkdemoiselle</groupId>
             <artifactId>demoiselle-jta</artifactId>
             <scope>compile</scope>
         </dependency>
+-->
         <dependency>
             <groupId>org.primefaces</groupId>
             <artifactId>primefaces</artifactId>
@@ -39,6 +41,7 @@
             <groupId>postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <version>9.1-901-1.jdbc4</version>
+            <scope>test</scope>
         </dependency>
         <dependency>  
             <groupId>org.primefaces.themes</groupId>  
@@ -80,6 +83,11 @@
             <artifactId>commons-email</artifactId>
             <version>1.1</version>
         </dependency>
+                <dependency>
+                        <groupId>org.powermock</groupId>
+                        <artifactId>powermock-api-easymock</artifactId>
+                        <scope>test</scope>
+                </dependency>
     </dependencies>
 
     <repositories>

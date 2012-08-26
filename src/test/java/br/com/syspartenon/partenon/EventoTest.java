@@ -17,25 +17,37 @@ public class EventoTest {
     @Inject
     private EventoBC eventoBC;
     
+        @Test
+        public void testLoad() {
+                eventoBC.load();
+                List<Evento> listaEventos = eventoBC.findAll();
+                assertNotNull(listaEventos);
+                assertEquals(0, listaEventos.size());
+        }
+
+/*
     @Test 
     @Transactional
     public void testInsert(){
-//        Evento evt = new Evento();
-//        //evt.setEvtId(99999);
-//        evt.setEvtNome("Evento Teste");
-//        evt.setEvtDescricao("Descrição Evento Teste");
-//        evt.setEvtInicio(new Date());
-//        evt.setEvtFim(new Date());
-//        evt.setLocal(new Local());
-//        evt.getLocal().setLclDescricao("Local Teste");
-//        evt.getLocal().setEndereco(new Endereco());
-//        evt.getLocal().getEndereco().setEndRua("Rua XXX");
-//        evt.getLocal().getEndereco().setEndBairro("XXX");
-//        evt.getLocal().getEndereco().setEndCep("89900000");
-//        eventoBC.insert(evt);
-//        
-//        Evento evtCarregado = eventoBC.load(99999); 
-//        //se != null então foi inserido
-//        assertNotNull(evtCarregado);
+        Evento evt = new Evento();
+        //evt.setEvtId(99999);
+        evt.setEvtNome("Evento Teste");
+        evt.setEvtDescricao("Descrição Evento Teste");
+        evt.setEvtInicio(new Date());
+        evt.setEvtFim(new Date());
+        evt.setLocal(new Local());
+        evt.getLocal().setLclDescricao("Local Teste");
+        evt.getLocal().setEndereco(new Endereco());
+        evt.getLocal().getEndereco().setEndRua("Rua XXX");
+        evt.getLocal().getEndereco().setEndBairro("XXX");
+        evt.getLocal().getEndereco().setEndCep("89900000");
+        eventoBC.insert(evt);
+        
+        Evento evtCarregado = eventoBC.load(99999); 
+        //se != null então foi inserido
+        assertNotNull(evtCarregado);
     }
+*/
+
 }
+
